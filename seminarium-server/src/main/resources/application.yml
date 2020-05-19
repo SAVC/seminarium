@@ -1,0 +1,14 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-46-137-156-205.eu-west-1.compute.amazonaws.com:5432/dcj82arq75vp61
+    username: jndyjyzbkpkzxa
+    password: da07fe8db3e16d408946705bc1588ae321028eb550bfdc2e9cdf34972d9b589b
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog.xml
