@@ -11,6 +11,10 @@
     <name>seminarium</name>
     <description>Seminarium</description>
 
+    <modules>
+        <module>seminarium-server</module>
+    </modules>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
