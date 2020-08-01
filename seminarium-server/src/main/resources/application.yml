@@ -11,4 +11,7 @@ spring:
     hibernate:
       ddl-auto: none
   liquibase:
-    change-log: classpath:db/changelog.xml
+    enabled: false
+
+photostorage:
+  location: filestorage

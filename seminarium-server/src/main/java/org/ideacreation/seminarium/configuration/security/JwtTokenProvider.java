@@ -67,7 +67,8 @@ public class JwtTokenProvider {
     public UserDto getUser(String token) {
         @SuppressWarnings("unchecked")
         Map<String, String> user = (Map<String, String>) Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().get("user");
-        return new UserDto(user.get("username"), user.get("email"), Role.valueOf(user.get("role")), user.get("nickname"));
+        return new UserDto(null, user.get("username"), user.get("nickname"), user.get("email"), Role.valueOf(user.get("role")),
+                user.get("phoneNumber"), user.get("firstName"), user.get("lastName"), user.get("surname"));
     }
 
     public String resolveToken(HttpServletRequest req) {

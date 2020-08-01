@@ -4,3 +4,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/seminarium
     username: postgres
     password: root
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none

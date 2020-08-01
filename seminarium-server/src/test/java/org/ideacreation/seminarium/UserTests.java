@@ -23,6 +23,7 @@ public class UserTests {
         userRegistrationRequest.setUsername("test");
         userRegistrationRequest.setPassword("test");
         userRegistrationRequest.setNickname("test");
+        userRegistrationRequest.setPhoneNumber("+7-977-896-74-11");
         userService.signUp(userRegistrationRequest);
 
         Assertions.assertTrue(userRepository.existsByUsername("test"));
